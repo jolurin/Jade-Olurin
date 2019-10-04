@@ -14,7 +14,7 @@ imread("el-capitan.png")
 img = imread("el-capitan.png")
 imshow(convert(Array{Float32,3}, img))
 
-#b.
+#b, c, and d.
 function loadDisplayExtract(img; channelNumber=1)
 
     for i = channelNumber:channelNumber+2
@@ -25,3 +25,14 @@ function loadDisplayExtract(img; channelNumber=1)
     println "Reset with git reset -- mixed"
     return "Rchannel contents and size", Rchannel, size(Rchannel), "Gchannel contents and size", Gchannel, size(Gchannel), "Bchannel contents and size", Bchannel, size(Bchannel)
 end
+
+#e
+image2 = img
+image2[:,:,1] = img[:,:,2]
+image2[:,:,2] = img[:,:,3]
+image2[:,:,3] = img[:,:,1]
+subplot(1,2,2)
+imshow(image2)
+subplot(1,2,1)
+imshow(convert(Array{Float32,3}, img))
+figure(figsize=[640,360]), title("Original and with Flipped Colors"), axis("off")
