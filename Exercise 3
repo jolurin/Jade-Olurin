@@ -15,7 +15,12 @@ img = imread("el-capitan.png")
 imshow(convert(Array{Float32,3}, img))
 
 #b.
-function load_display_extract(img)
+channel = 1
+function load_display_extract(img; channel=1)
+    img = imread("el-capitan.png")
+    imread(img)
+    imshow(convert(Array{Float32,3}, img))
+    for i =channel:
     Rchannel = img[:,:,1];
     Gchannel = img[:,:,2];
     Bchannel = img[:,:,3];
