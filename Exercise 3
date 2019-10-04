@@ -40,7 +40,7 @@ subplot(1,2,2)
 title(" "), axis("off")
 #loading and showing flipped image
 flipped = imread("Original and with Flipped Colors.png")
-imshow(convert(Array{Float32,3}, flipped))
+
 
 #B
 numShift = 0
@@ -48,9 +48,10 @@ function shiftUp(image; numShift)
     shifted = circshift(image, (-numShift,0))
     subplot(1,2,2)
     imshow(shifted)
-    title(" "), axis("off")
+    title("Shifted Rchannel"), axis("off")
     return shifted
 end
 subplot(1,2,1)
 imshow(Rchannel)
-title("Original Rchannel with a 180 pixel shift up"), axis("off")
+title("Original Rchannel"), axis("off")
+shiftedFinal = imread("Rchannel\ shifted\ and\ unshifted.png")
