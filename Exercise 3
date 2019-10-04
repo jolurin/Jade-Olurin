@@ -22,6 +22,6 @@ function loadDisplayExtract(img; channelNumber=1)
         Gchannel = img[:,:,2];
         Bchannel = img[:,:,3];
     end
-    println "BUG BUG BUG"
+    println "Reset with git reset -- mixed"
     return "Rchannel contents and size", Rchannel, size(Rchannel), "Gchannel contents and size", Gchannel, size(Gchannel), "Bchannel contents and size", Bchannel, size(Bchannel)
 end
