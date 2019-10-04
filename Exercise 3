@@ -15,18 +15,12 @@ img = imread("el-capitan.png")
 imshow(convert(Array{Float32,3}, img))
 
 #b.
-channel = 1
-function load_display_extract(img; channel=1)
-    img = imread("el-capitan.png")
-    imread(img)
-    imshow(convert(Array{Float32,3}, img))
-    for i =channel:
-    Rchannel = img[:,:,1];
-    Gchannel = img[:,:,2];
-    Bchannel = img[:,:,3];
-    return size
-    return Rchannel, Gchannel, Bchannel
-    println("Dimensions of Rchannel", size(Rchannel))
-    println("Dimensions of Gchannel", size(Gchannel))
-    println("Dimensions of Bchannel", size(Bchannel))
+function loadDisplayExtract(img; channelNumber=1)
+
+    for i = channelNumber:channelNumber+2
+        Rchannel = img[:,:,1];
+        Gchannel = img[:,:,2];
+        Bchannel = img[:,:,3];
+    end
+    return "Rchannel contents and size", Rchannel, size(Rchannel), "Gchannel contents and size", Gchannel, size(Gchannel), "Bchannel contents and size", Bchannel, size(Bchannel)
 end
