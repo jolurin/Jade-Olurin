@@ -41,3 +41,5 @@ title(" "), axis("off")
 #loading and showing flipped image
 flipped = imread("Original and with Flipped Colors.png")
 imshow(convert(Array{Float32,3}, flipped))
+
+#B
