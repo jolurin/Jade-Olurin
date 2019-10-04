@@ -6,3 +6,7 @@ pygui(true); using Printf
 
 #loading el-capitan into Julia
 imread("el-capitan.png")
+
+#getting Julia to show the image
+img = imread("el-capitan.png")
+imshow(convert(Array{Float32,3}, img))
