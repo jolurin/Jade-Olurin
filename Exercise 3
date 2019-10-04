@@ -27,18 +27,17 @@ function loadDisplayExtract(img; channelNumber=1)
 end
 
 #e
-image2 = img
+image2 = imread("el-capitan.png")
+subplot(1,2,2)
+imshow(image2)
+title("Original"), axis("off")
 image2[:,:,1] = img[:,:,2]
 image2[:,:,2] = img[:,:,3]
 image2[:,:,3] = img[:,:,1]
-subplot(1,2,2)
-imshow(image2)
 subplot(1,2,1)
 imshow(convert(Array{Float32,3}, img))
-title("Original and with Flipped Colors"), axis("off")
-subplot(1,2,2)
-title(" "), axis("off")
-#loading and showing flipped image
+title("Flipped Colors"), axis("off")
+#loading image --> but realized it's entered on Github
 flipped = imread("Original and with Flipped Colors.png")
 
 
