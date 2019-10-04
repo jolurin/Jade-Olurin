@@ -3,4 +3,6 @@ using JLD
 using PyPlot
 #
 pygui(true); using Printf
-#
+
+#loading el-capitan into Julia
+imread("el-capitan.png")
