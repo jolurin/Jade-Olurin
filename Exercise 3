@@ -4,6 +4,9 @@ using PyPlot
 #
 pygui(true); using Printf
 
+#1. A
+
+#a.
 #loading el-capitan into Julia
 imread("el-capitan.png")
 
