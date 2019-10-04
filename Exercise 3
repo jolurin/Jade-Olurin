@@ -13,3 +13,15 @@ imread("el-capitan.png")
 #getting Julia to show the image
 img = imread("el-capitan.png")
 imshow(convert(Array{Float32,3}, img))
+
+#b.
+function load_display_extract(img)
+    Rchannel = img[:,:,1];
+    Gchannel = img[:,:,2];
+    Bchannel = img[:,:,3];
+    return size
+    return Rchannel, Gchannel, Bchannel
+    println("Dimensions of Rchannel", size(Rchannel))
+    println("Dimensions of Gchannel", size(Gchannel))
+    println("Dimensions of Bchannel", size(Bchannel))
+end
